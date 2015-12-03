@@ -1,4 +1,106 @@
-Line 01 - hello
-Line 02
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="about.html">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src = script.js></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Just Married</title>
+</head>
+<body>
+<video controls muted autoplay loop id="bgvid">
+    <source src="images/Wedding2014.mp4" type="video/mp4">
+</video>
+<div id="bgvid_overlay"></div>
+<nav class="navbar-inverse">
+    <ul class="nav navbar-nav navbar-right>
+     <li class="dropdown">
+    <div class="dropdown">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+            Menu<span class="glyphicon glyphicon-th"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#featuredBrides">Featured Brides</a></li>
+            <li><a href="#">Vendor of the Week</a></li>
+        </ul>
+    </div>
+</nav>
 
+<div class="intro">
+    <h1>Just Married</h1>
+    <h2>Where Brides find the "One"</h2>
+</div>
+<div class="missionStatement">
+    <h3>Devoted to helping you find the "one"</h3>
+        <p>He finally popped the question and you said yes! What next?
+        Here at Just Married, we let you become the wedding planner.</p>
+            <button class="planningButton">Let's Start Planning!</button>
+</div>
+<div class="about">
+    <img class="just_married" src="images/AndyKing0144.JPG" id="aboutUs">
+    <h1 class="black_header">About Us</h1>
+</div>
+<div class="featured_brides" id="featuredBrides"> <a href="featured_brides" target="_blank"></a>
+        <!--<h1 class="featured_brides_header">Featured Brides</h1>-->
+    <div class="featuredLetters">
+        <h5>F</h5>
+        <h5>E</h5>
+        <h5>A</h5>
+        <h5>T</h5>
+        <h5>U</h5>
+        <h5>R</h5>
+        <h5>E</h5>
+        <h5>D</h5>
+</div>
+    <div class="brideContainer">
+        <!-- <div class="bride"><img src="images/AndyKing0312.JPG">Bride 1</div>
+        <div class="bride"><img src="images/AndyKing0319.JPG">Bride 2</div>
+        <div class="bride"><img src="images/AndyKing0326.JPG">Bride 3</div>
+        <div class="bride"><img src="images/AndyKing0312.JPG">Bride 4</div>
+         <div class="bride"><img src="images/AndyKing0319.JPG">Bride 5</div>
+         <div class="bride"><img src="images/AndyKing0326.JPG">Bride 6</div>
+        -->
+    </div>
+    <div class="bridesLetters">
+        <h5>B</h5>
+        <h5>R</h5>
+        <h5>I</h5>
+        <h5>D</h5>
+        <h5>E</h5>
+        <h5>S</h5>
+     </div>
+</div>
+<div class="container">
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" data-target="#myModal" data-local="#myCarousel">&times;</button>
+                    <h4 class="modal-title">Bride</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  ><a href="about.html">Go to Bride's Page</a></button>
+                    <button type="button"  data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>                                		
