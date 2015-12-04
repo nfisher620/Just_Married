@@ -24,6 +24,7 @@ body{
 /* menu name */
 button:hover{
     text-decoration:none;
+    color:lightslategray;
 }
 /* menu icon */
 button{
@@ -98,12 +99,12 @@ video {
 h1{
     color:white;
     font-family:'Tangerine',serif;
-    font-size:9em;
+    font-size:8em;
     text-shadow: 7px 7px 7px black;
     text-align:center;
     margin:0;
     position: relative;
-    top: 26vh;
+    top: 30vh;
 }
 /* Tag line for opening */
 h2{
@@ -115,7 +116,7 @@ h2{
     text-align:center;
     margin:0;
     text-transform: uppercase;
-    top: 33vh;
+    top: 35vh;
 }
 /* End of .intro */
 
@@ -171,13 +172,13 @@ h3{
 /* h1 tag "About Us" */
 .black_header{
     color:black;
-    font-family:'Tangerine',serif;
+    font-family:'Open Sans Condensed',serif;
     font-size:6em;
     text-shadow: 7px 7px 7px white;
     text-align:center;
     position:relative;
     right:37vw;
-    top:-20vh;
+    top:-22vh;
 }
 /* Paragraph for about us section */
 p{
@@ -188,7 +189,7 @@ p{
     font-family:"Open Sans Condensed", serif;
     font-size:3em;
     text-align:center;
-    margin:0% 5% 0% 5%;
+    margin:-4% 10% -1% 10%;
 }
 /* End of .about div */
 
@@ -288,11 +289,11 @@ p{
 }
 a{
     text-decoration: none;
-    color:black;
+    color:white;
 }
 a:hover{
     text-decoration: none;
-    color:gray;
+    color:black;
 }
 a:visited{
     text-decoration: none;
@@ -447,4 +448,26 @@ a:visited{
     right:-31vw;
     top:2vh;
     position:relative;
+}
+.hoverButton:hover{
+    color:lightslategray;
+}
+/* Container to hold vendor divs */
+.vendors{
+    width: 15vw;
+    height: 15vh;
+    display: inline-block;
+    margin: 2vh 8vw;
+    top: 28vh;
+    position: relative
+}
+.vendor{
+    position:relative;
+    display:inline-block;
+    margin: 76px -5px -42px 43px;
+    width: 20.5vw;
+    height: 28.7vh;
+    max-width:100%;
+    max-height:100%;
+    margin-right:11px;
 }

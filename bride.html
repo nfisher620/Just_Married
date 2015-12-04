@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="about.html">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src = script.js></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Just Married</title>
+    <style>
+        video#bgvid {
+            position: relative;
+            top: 50vh;
+            left: 50%;
+            max-width: 66%;
+            min-height: 39%;
+            width: auto;
+            height: auto;
+            /* z-index: -100; */
+            -webkit-filter: contrast(1.3) brightness(0.8) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+            filter: contrast(1.3) brightness(0.8) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
+            transform: translateX(-50%) translateY(-50%);
+            /* background-size: cover; */
+            opacity: 1.5;
+            transition-duration: 10s;
+        }
+        #bgvid_overlay {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar-inverse">
+    <ul class="nav navbar-nav navbar-right>
+     <li class="dropdown">
+    <div class="dropdown">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+            Menu<span class="glyphicon glyphicon-th"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#featuredBrides">Featured Brides</a></li>
+            <li><a href="#">Vendor of the Week</a></li>
+        </ul>
+    </div>
+</nav>
+<video controls muted autoplay loop id="bgvid">
+    <source src="images/Wedding2014.mp4" type="video/mp4">
+</video>
+<div id="bgvid_overlay"></div>
+<div class="vendorContainer">
+ <!-- Dom Creation vendor containers -->
+</div>
+
+
+</body>
+</html>
