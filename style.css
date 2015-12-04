@@ -232,7 +232,6 @@ p{
     height: 28.7vh;
     transition: .3s ease-in-out;
     -webkit-transform: scale(1);
-    -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
@@ -461,13 +460,70 @@ a:visited{
     top: 28vh;
     position: relative
 }
-.vendor{
-    position:relative;
-    display:inline-block;
+.vendorImage {
+    position: relative;
     margin: 76px -5px -42px 43px;
     width: 20.5vw;
     height: 28.7vh;
-    max-width:100%;
-    max-height:100%;
-    margin-right:11px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.vendorDiv{
+    position:relative;
+    display:inline-block;
+    margin-right:3vw;
+    margin-left:3vw;
+}
+
+.brideHeader{
+    color:white;
+    font-family:'Tangerine',serif;
+    font-size:8em;
+    text-shadow: 7px 7px 7px black;
+    text-align:center;
+    margin:0;
+    position: relative;
+    top: -4vh;
+
+}
+
+#f1_container {
+    position: relative;
+    margin: 10px auto;
+    width: 450px;
+    height: 281px;
+    z-index: 1;
+}
+#f1_container {
+    perspective: 1000;
+}
+#f1_card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #aaa;
+}
+.face>img{
+    width:100%;
+    height:100%;
 }
