@@ -17,7 +17,7 @@
     <style>
         video#bgvid {
             position: relative;
-            top: 50vh;
+            top: 47vh;
             left: 50%;
             max-width: 66%;
             min-height: 39%;
@@ -25,7 +25,7 @@
             height: auto;
             /* z-index: -100; */
             /* background-size: cover; */
-            margin-bottom:17vh;
+            margin-bottom:14vh;
         }
         #bgvid_overlay {
             visibility: hidden;
@@ -41,8 +41,8 @@
             Menu<span class="glyphicon glyphicon-th"></span></button>
         <ul class="dropdown-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#aboutUs">About Us</a></li>
-            <li><a href="#featuredBrides">Featured Brides</a></li>
+            <li><a href="#aboutUs.html">About Us</a></li>
+            <li><a href="#featuredBrides.html">Featured Brides</a></li>
             <li><a href="#">Vendor of the Week</a></li>
         </ul>
     </div>
@@ -51,20 +51,65 @@
     <source src="images/Wedding%20Trailer%20-%20%23fisherwedding620.mp4" type="video/mp4">
 </video>
 <h1 class="brideHeader">Nicole Fisher</h1>
+<h2 class="marriedDate">June 20, 2015</h2>
 <div id="bgvid_overlay"></div>
 <div class="vendorContainer">
- <!-- Dom Creation vendor containers -->
+        <!-- Dom Creation vendor containers -->
 </div>
-<div id="f1_container">
-    <div id="f1_card" class="shadow">
+<div class="container">
+
+    <!-- Modal -->
+    <div class="modal fade" id="imagemodal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" data-target="#myModal" data-local="#myCarousel">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"><a href="bride.html" class="hoverButton">Vendor's Page</a></button>
+                    <button type="button" class="hoverButton" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="f1_container">
+    <div class="f1_card" class="shadow">
         <div class="front face">
             <img src="images/bridesmaids.jpg"/>
         </div>
         <div class="back face center">
-            <p>This is nice for exposing more information about an image.</p>
+            <p>My girls</p>
         </div>
     </div>
 </div>
-
+<div>
+</div>
 </body>
 </html>

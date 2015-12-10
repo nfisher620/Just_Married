@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap-modal-carousel.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="about.html">
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src = script.js></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="bootstrap-modal-carousel.js"/></script/>
+    <script>
+            function load_files(element)
+            {
+                $.ajax(
+                            {
+                                url: 'http://localhost:8888/lfz/prototypes/php_directory_operations/gallery.php',
+                                method: 'GET',
+                                dataType: 'json',
+                                success: function(result)
+                        {
+                            createImages(result['images']);
+                        },
+                        error: function(result)
+                        {
+
+                        }
+                    });
+            }
+
+                    function createImages(img_arr)
+            {
+                var gallery = $('<div>');
+
+                        for (var i = 0; i < images.length; i++)
+                    {
+                        var button = $('<a>');
+
+                            var image = $('<img>');
+                }
+            }
+    </head>
+<div class="container">
+
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="#lightbox" data-toggle="modal">Click Me</a></li>
+       <!-- <li><a href="#lightbox" data-toggle="modal" data-slide-to="1">2nd Image</a></li>
+        <li><a href="#lightbox" data-toggle="modal" data-slide-to="2">3rd Image</a></li>
+        <li><a href="#lightbox" data-toggle="modal" data-slide-to="15">Open non existing Image</a></li> -->
+    </ul>
+
+    <div class="modal fade and carousel slide" id="lightbox">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class ="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    <ol class="carousel-indicators">
+                        <li data-target="#lightbox" data-slide-to="0" class="active"></li>
+                        <li data-target="#lightbox" data-slide-to="1"></li>
+                        <li data-target="#lightbox" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/AndyKing0144.JPG" alt="First slide">
+                        </div>
+                        <div class="item">
+                            <img src="images/accessories.jpg" alt="Second slide">
+                        </div>
+                        <div class="item">
+                            <img src="images/cake.jpg" alt="Third slide">
+                            <div class="carousel-caption"><p>Cake by Its all about the cake</p></div>
+                        </div>
+                    </div><!-- /.carousel-inner -->
+                    <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div><!-- /.container -->
+</body>
+</html>

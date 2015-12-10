@@ -99,7 +99,7 @@ video {
 h1{
     color:white;
     font-family:'Tangerine',serif;
-    font-size:8em;
+    font-size:10vw;
     text-shadow: 7px 7px 7px black;
     text-align:center;
     margin:0;
@@ -111,7 +111,7 @@ h2{
     color:white;
     position:relative;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:4em;
+    font-size:5vw;
     text-shadow: 7px 7px 7px black;
     text-align:center;
     margin:0;
@@ -125,7 +125,7 @@ h3{
     color:white;
     position:relative;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:5em;
+    font-size:5vw;
     text-shadow: 2px 3px 17px white;
     text-align:center;
     text-transform: uppercase;
@@ -143,7 +143,6 @@ h3{
 }
 .planningButton{
     background-color: white;
-    border: none;
     font-family: "Open Sans Condensed",sans-serif;
     color: black;
     font-size: 26px;
@@ -228,8 +227,8 @@ p{
     position: relative;
     color: white;
     margin: 76px -5px -42px 43px;
-    width: 20.5vw;
-    height: 28.7vh;
+    width: 22.5vw;
+    height: 58vh;
     transition: .3s ease-in-out;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -243,6 +242,7 @@ p{
 .bride:hover{
    -webkit-transform: scale(1.1);
   	transform: scale(1.1);
+    cursor:pointer;
 }
 /* Modal for featured brides */
 .modal-body {
@@ -263,7 +263,10 @@ p{
 .modal-title {
     margin: 0;
     line-height: 1.42857143;
-    font-size: 24px;
+    font-size: 29px;
+    left: 1vw;
+    position: relative;
+    top:0vh;
 }
 .modal-header img{
     margin: 0 auto;
@@ -278,6 +281,10 @@ p{
     border-top: 1px solid #e5e5e5;
     background-color: black;
 }
+.modal.in .modal-dialog {
+    position: relative;
+    left: 10vw;
+}
 /* Close button */
 .btn-info{
     background-repeat: repeat-x;
@@ -289,6 +296,8 @@ p{
 a{
     text-decoration: none;
     color:white;
+    position: relative;
+    left: -6vw;
 }
 a:hover{
     text-decoration: none;
@@ -327,7 +336,7 @@ a:visited{
 .featured_brides h5 {
     font-family:"Open Sans Condensed", sans-serif;
     letter-spacing: -20px;
-    font-size:450%;
+    font-size:7vw;
     color:white;
     position:relative;
     top:7vh;
@@ -450,17 +459,18 @@ a:visited{
 }
 .hoverButton:hover{
     color:lightslategray;
+    text-decoration: none;
 }
 /* Container to hold vendor divs */
-.vendors{
-    width: 15vw;
-    height: 15vh;
-    display: inline-block;
-    margin: 2vh 8vw;
-    top: 28vh;
-    position: relative
+.img-container {
+    position:relative;
+    display:inline-block;
+    margin-right:3vw;
+    margin-left:3vw;
+    width:26vw;
 }
-.vendorImage {
+
+.gallery-img {
     position: relative;
     margin: 76px -5px -42px 43px;
     width: 20.5vw;
@@ -469,42 +479,69 @@ a:visited{
     max-height: 100%;
 }
 
-.vendorDiv{
-    position:relative;
-    display:inline-block;
-    margin-right:3vw;
-    margin-left:3vw;
+.text-cover {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.text {
+    position: relative;
+    top: 50%;
+    color: white;
+    font-size:3em;
+    font-family: 'Open Sans Condensed', serif;
+    transform: translateY(-50%);
 }
 
 .brideHeader{
     color:white;
-    font-family:'Tangerine',serif;
+    font-family:'Open Sans Condensed',serif;
     font-size:8em;
     text-shadow: 7px 7px 7px black;
     text-align:center;
     margin:0;
     position: relative;
-    top: -4vh;
+    top: -8vh;
 
 }
+.marriedDate {
+    color: white;
+    position: relative;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 5vw;
+    text-shadow: 7px 7px 7px black;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    top: -5vh;
+}
 
-#f1_container {
+.f1_container {
     position: relative;
     margin: 10px auto;
     width: 450px;
     height: 281px;
     z-index: 1;
 }
-#f1_container {
+.f1_container {
     perspective: 1000;
 }
-#f1_card {
+.f1_card {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: all 1.0s linear;
+    position:relative;
+    top:14vh;
 }
-#f1_container:hover #f1_card {
+.f1_container:hover .f1_card {
     transform: rotateY(180deg);
     box-shadow: -5px 5px 5px #aaa;
 }
@@ -526,4 +563,17 @@ a:visited{
 .face>img{
     width:100%;
     height:100%;
+}
+/* Modal */
+.modal.and.carousel {
+    position: absolute;
+}
+
+/*Nicole, comment me yo!*/
+#imagemodal .carousel-inner img{
+    width: 400px;
+    height: auto;
+}
+.white-text{
+    color: white;
 }
