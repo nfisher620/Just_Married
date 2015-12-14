@@ -7,53 +7,66 @@ function parallax(){
     $('.bg').css('top',-(scrolled* .2)+'px');
 }
 
-//onload
+//onload functions
 $(document).ready(function(){
     //floralModal();
     buildGallery();
     createImages();
+    vendorListCreator();
+    createVendorIcons();
 });
 
-
-//DOM creation for bridal images
+//DOM creation for vendor images for bridal pages
 function buildGallery(){
     var gallery= [
         {
-            src: "images/accessories.jpg",
+            src: "images/vendorIcons/accessories.jpg",
             text: "Accessories"
 
         },
         {
-            src: "images/makeup.jpg",
+            src: "images/vendorIcons/makeup.jpg",
             text: "Hair and Make-Up"
         },
         {
-            src: "images/cake.jpg",
+            src: "images/vendorIcons/cake.jpg",
             text: "Cake"
         },
         {
-            src: "images/dress.jpg",
+            src: "images/vendorIcons/attire.jpg",
             text: "Attire"
         },
         {
-            src: "images/floralVase.jpg",
+            src: "images/vendorIcons/floralVase.jpg",
             text: "Flowers"
         },
         {
-            src: "images/photobooth.jpg",
-            text: "Extras"
+            src: "images/vendorIcons/photobooth.jpg",
+            text: "Entertainment"
         },
         {
-            src: "images/photographer.jpg",
+            src: "images/vendorIcons/photographer.jpg",
             text: "Photography"
         },
         {
-            src: "images/venue.jpg",
+            src: "images/vendorIcons/venue.jpg",
             text: "Venue"
         },
         {
-            src: "images/videographer.jpg",
+            src: "images/vendorIcons/videography.jpg",
             text: "Videography"
+        },
+        {
+            src: "images/vendorIcons/food.jpg",
+            text: "Food and Drink"
+        },
+        {
+            src: "images/vendorIcons/personaltouch.jpg",
+            text: "Personal Touches"
+        },
+        {
+            src: "images/vendorIcons/transportation.jpg",
+            text: "Transportation"
         }
     ];
     var container = $('.vendorContainer');
@@ -73,22 +86,20 @@ function buildGallery(){
         var cover = $("<div>", {
             class: 'text-cover'
         });
-
         var text = $("<div>", {
             text: gallery[i].text,
             class: 'text'
         });
 
         cover.append(text).hide();
-
         imgContainer.append(img,cover).appendTo(container);
 
         (function(){
             var divId = '#img-' + i;
             var thisCover = cover;
-
+            //hover for category names
             container.on("mouseenter", divId, function(){
-                thisCover.fadeIn(500);
+                thisCover.fadeIn(200);
                 thisCover.css({
                     margin: '76px -5px -42px 43px',
                     width: '20.5vw',
@@ -97,7 +108,7 @@ function buildGallery(){
                     'max-height': '100%'
                 });
             }).on("mouseleave", divId, function(){
-                thisCover.fadeOut(500);
+                thisCover.fadeOut(200);
             });
         })();
     }
@@ -142,18 +153,16 @@ function createImages() {
             var fullImg = $('<img>').attr('src', imgSource).css('width', '100%').css('margin', 'auto', '0');
             $('.modal-body').append(fullImg);
             $('.modal-title').html(title);
-            //console.log(bridalImages[i].text);
 
     });
-    console.log("moooooooo");
+    //Opens modal for vendor for category selected
     $('.text-cover').click(function () {
         //$('.modal-body').empty();
-        console.log('I can has working now?');
-        get_vendor_images(5); //TODO: NO MAGIC NUMBERS RAWWWRR
+        getVendorImages(12); //TODO: NO MAGIC NUMBERS
     });
 
-}
-function get_vendor_images(vendor_id){
+}//Ajax call to just_married database in phpAdmin
+function getVendorImages(vendor_id){
     $.ajax({
         url:'http://localhost:8888/lfz/Just-Married/get_images.php',
         dataType: 'json',
@@ -163,21 +172,17 @@ function get_vendor_images(vendor_id){
             if(!response.success){
                 return;
             }
-            console.log('it dun worked', response.images);
+            console.log('Ajax success', response.images);
             $('#imagemodal').modal();
-            //var imgSource = $(this).attr('src');
-            //var fullImg = $('<img>').attr('src', imgSource).css('width', '100%').css('margin', 'auto', '0');
-            //$('.modal-body').append(fullImg);
-            //console.log('text cover working');
-            make_carousel_photos(response.images, '#imagemodal');
+            makeCarouselPhotos(response.images, '#imagemodal');
         },
         error: function(){
-            console.log('something dun fucked up');
+            console.log('Modal for vendors did not work');
         }
     });
 }
-
-function make_carousel_photos(photo_array, carousel_id){
+// Creates carousel for vendor modals
+function makeCarouselPhotos(photo_array, carousel_id){
     photo_container=[];
     photo_indicator=[];
     for(var i=0; i<photo_array.length;i++){
@@ -202,8 +207,8 @@ function make_carousel_photos(photo_array, carousel_id){
             class: 'modal-title'
         });
         $link = $("<a>",{
-            href: 'www.lisahadleystudios.com',
-            class:'hoverButton',
+            href: photo_array[i].url,
+            //class:'hoverButton',
         });
         $button = $('button'),
         photo_container.push($div);
@@ -212,14 +217,14 @@ function make_carousel_photos(photo_array, carousel_id){
     console.log(photo_container[0]);
     photo_container[0].addClass('active');
     photo_indicator[0].addClass('active');
-    $('.modal-title').append($title);
-    $('button')
+    $('.modal-title').empty().append($title);
+    $('button').append($link);
+    $('modal-footer').append($button);
 
     $(carousel_id).find('.carousel-indicators').empty().append(photo_indicator);
     $(carousel_id).find('.carousel-inner').empty().append(photo_container);
 
 }
-
 $('.img-container').on('click','.text-cover');
 $('.text-cover').on('click', function(){
         console.log('onclick working');
@@ -260,6 +265,142 @@ $('.hover').mouseout(function() {
     $('.text').css("visibility","hidden");
 });
 
+function vendorListCreator(){
+    var vendorList= [
+        {
+            title: "David's Bridal",
+            url: "http://www.davidsbridal.com"
+        },
+        {
+            title: "Beach Bridal Beauty",
+            url: "http://www.beachbridalbeauty.com"
+        },
+        {
+            title: "Andy King Photography",
+            url: "http://www.andykingphotography.com"
+        },
+        {
+            title: "It's All About the Cake",
+            url: "http://www.itsallaboutthecake.com"
+        },
+        {
+            title: "Florals by Jenny",
+            url: "http://www.floralsbyjenny.com"
+        },
+        {
+            title: "Talega Golf Club",
+            url: "http://www.talegagolfclub"
+        },
+        {
+            title: "Lisa Hadley Studios",
+            url: "http://www.lisahadleystudios.com"
+        },
+        {
+            title: "Chunk-N-Chip",
+            url: "http://www.chunknchip.com"
+        },
+        {
+            title: "Lake Forest Limousine",
+            url: "http://www.lakeforestlimos.com/"
+        },
+        {
+            title: "Etsy",
+            url: "http://www.etsy.com"
+        },
+        {
+            title: "Pro Frame Photobooth",
+            url:"http://proframephotobooths.com/"
+        }
+];
+
+    for(var i = 0; i<vendorList.length; i++){
+        var vendorName = $('<h2>', {
+            text: vendorList[i].title,
+            class: 'vendorTitle'
+
+        });
+        var url = $('<a>',{
+            href: vendorList[i].url,
+            class: 'vendorUrlLogo'
+            });
+        $(url).append(vendorName);
+        $('.back').append(url);
+    }
+var vendorFrontCardTitle = $('<h2>', {
+        text:"The Vendors",
+        class: 'vendorList'
+});
+$('.front').append(vendorFrontCardTitle);
+}
+
+function createVendorIcons(){
+    var vendorIcons = [
+        {
+            src: "images/vendorLogos/andykinglogo.jpg",
+            url: "http://www.andykingphotography.com"
+        },
+        {
+            src: "images/vendorLogos/beachlogo.png",
+            url: "http://www.beachbridalbeauty.com"
+        },
+        {
+            src: "images/vendorLogos/cakelogo.gif",
+            url: "http://www.itsallaboutthecake.com"
+        },
+        {
+            src: "images/vendorLogos/chunknchiplogo.png",
+            url: "http://www.chunknchip.com"
+        },
+        {
+            src: "images/vendorLogos/davidsbridallogo.gif",
+            url: "http://www.davidsbridal.com"
+        },
+        {
+            src: "images/vendorLogos/etsylogo.png",
+            url: "http://www.etsy.com"
+        },
+        {
+            src: "images/vendorLogos/florallogo.jpg",
+            url: "http://www.floralsbyjenny.com"
+        },
+        {
+            src: "images/vendorLogos/limologo.jpg",
+            url: "http://www.lakeforestlimos.com/"
+        },
+        {
+            src: "images/vendorLogos/lisahadleylogo.jpg",
+            url: "http://www.lisahadleystudios.com"
+        },
+        {
+            src: "images/vendorLogos/talegalogo.gif",
+            url: "http://www.talegagolfclub.com"
+        },
+        {
+            src: "images/vendorLogos/wearhouselogo.jpeg",
+            url: "http://www.menswearhouse.com"
+        },
+        {
+            src: "images/vendorLogos/photoboothlogo.jpg",
+            url: "http://proframephotobooths.com/"
+        }
+    ]
+    for(var i = 0; i < vendorIcons.length; i++){
+        var vendorDiv = $('<div>', {
+            class: 'vendorLogoDiv'
+        });
+        var vendorIcon = $('<img>',{
+            src: vendorIcons[i].src,
+            class: 'vendorLogo'
+        });
+        var link = $('<a>', {
+            href: vendorIcons[i].url,
+        });
+        $(link).append(vendorIcon);
+        $(vendorDiv).append(link);
+        $('.f2_container').append(vendorDiv);
+    }
+    $('vendorDiv')
+}
 
 //function floralModal(){
 //    var floralGallery = ['images/floral', 'images/aisle.jpg', 'images/aisle1.jpg','images/aisle2.jpg', 'images/floral1.jpg']
