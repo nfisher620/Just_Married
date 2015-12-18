@@ -150,7 +150,7 @@ h3{
     position: relative;
     border: silver ridge 3px;
     top:45vh;
-    left:38vw;
+    left:41vw;
     font-variant: bold;
 }
 .planningButton:hover{
@@ -164,8 +164,8 @@ h3{
     background-size: cover;
     position:relative;
     width:100%;
-    height:125vh;
-    top:638px;
+    height:153vh;
+    top:612px;
 }
 /* Inside .about div */
 /* h1 tag "About Us" */
@@ -177,7 +177,7 @@ h3{
     text-align:center;
     position:relative;
     right:37vw;
-    top:-22vh;
+    top:-48vh;
 }
 /* Paragraph for about us section */
 p{
@@ -202,7 +202,7 @@ p{
     position: relative;
     width: 100%;
     height: 107vh;
-    top: 375px;;
+    top: 173px;;
     border-top: 1px solid black;
 }
 /* title for featured brides */
@@ -464,30 +464,51 @@ a:visited{
 .img-container {
     position:relative;
     display:inline-block;
-    margin-right:3vw;
-    margin-left:3vw;
-    width:26vw;
+    margin: 3vw 7vw -1vw 3vw;
+    left: 4vw;
+    width:21%;
+    height: 21%;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .gallery-img {
-    position: relative;
-    margin: 76px -5px -42px 43px;
-    width: 20.5vw;
-    height: 28.7vh;
-    max-width: 100%;
-    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*margin: 76px -5px -42px 43px;*/
+    /*width: 20.5vw;
+    height: 28.7vh; */
+    height: 100%;
+    width: 100%;
+    #max-width: 100%;
+    #max-height: 100%;
 }
 
 .text-cover {
     display: inline-block;
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
+    left: 0px;
+    top: 100%;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .4);
     text-align: center;
+    /*transition-duration: .25s;*/
+}
+.img-container:hover{
+/*    margin: 76px -5px -42px 43px;
+    width: 20.5vw;
+    height: 28.7vh;
+    max-width: 100%;
+    max-height: 100%;*/
+}
+.img-container:hover .text-cover{
+    display: block;
+    top: 0px;
+    left: 0px;
 }
 
 .text {
@@ -575,8 +596,16 @@ a:visited{
     width: 400px;
     height: auto;
 }
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: 7vh;
+    }
+}
 .white-text{
     color: white;
+    text-align: center;
+    margin-left: 0vw;
+    margin-right: 0vw;
 }
 .vendorTitle{
     color:white;
@@ -633,4 +662,20 @@ a:visited{
 }
 #bridePage{
     right:10vw;
+}
+/*.circleBase {
+    border-radius: 50%;
+    position:relative;
+}*/
+
+.sideColumn {
+    width: 30.5vw;
+    height: 104.5vh;
+    background: black;
+    /* border: 0px 0px 2px 2px solid silver; */
+    left: 58.3vw;
+    display: inline-block;
+    margin-left: 10vw;
+    top: 200vh;
+    position: absolute;
 }

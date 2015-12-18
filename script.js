@@ -20,52 +20,52 @@ $(document).ready(function(){
 function buildGallery(){
     var gallery= [
         {
-            src: "images/vendorIcons/accessories.jpg",
+            src: "images/vendorIcons/accessories2.jpg",
             text: "Accessories"
 
         },
         {
-            src: "images/vendorIcons/makeup.jpg",
+            src: "images/vendorIcons/makeup2.jpg",
             text: "Hair and Make-Up"
         },
         {
-            src: "images/vendorIcons/cake.jpg",
+            src: "images/vendorIcons/cake2.jpg",
             text: "Cake"
         },
         {
-            src: "images/vendorIcons/attire.jpg",
+            src: "images/vendorIcons/attire2.jpg",
             text: "Attire"
         },
         {
-            src: "images/vendorIcons/floralVase.jpg",
+            src: "images/vendorIcons/floralVase2.jpg",
             text: "Flowers"
         },
         {
-            src: "images/vendorIcons/photobooth.jpg",
+            src: "images/vendorIcons/photobooth2.jpg",
             text: "Entertainment"
         },
         {
-            src: "images/vendorIcons/photographer.jpg",
+            src: "images/vendorIcons/photographer2.jpg",
             text: "Photography"
         },
         {
-            src: "images/vendorIcons/venue.jpg",
+            src: "images/vendorIcons/venue2.jpg",
             text: "Venue"
         },
         {
-            src: "images/vendorIcons/videography.jpg",
+            src: "images/vendorIcons/videography2.jpg",
             text: "Videography"
         },
         {
-            src: "images/vendorIcons/food.jpg",
+            src: "images/vendorIcons/food2.jpg",
             text: "Food and Drink"
         },
         {
-            src: "images/vendorIcons/personaltouch.jpg",
+            src: "images/vendorIcons/personaltouch2.jpg",
             text: "Personal Touches"
         },
         {
-            src: "images/vendorIcons/transportation.jpg",
+            src: "images/vendorIcons/transportation2.jpg",
             text: "Transportation"
         }
     ];
@@ -91,10 +91,10 @@ function buildGallery(){
             class: 'text'
         });
 
-        cover.append(text).hide();
+        cover.append(text);
         imgContainer.append(img,cover).appendTo(container);
 
-        (function(){
+        /*(function(){
             var divId = '#img-' + i;
             var thisCover = cover;
             //hover for category names
@@ -111,6 +111,7 @@ function buildGallery(){
                 thisCover.fadeOut(200);
             });
         })();
+        */
     }
 }
 
@@ -158,7 +159,7 @@ function createImages() {
     //Opens modal for vendor for category selected
     $('.text-cover').click(function () {
         //$('.modal-body').empty();
-        getVendorImages(12); //TODO: NO MAGIC NUMBERS
+        getVendorImages(4); //TODO: NO MAGIC NUMBERS
     });
 
 }//Ajax call to just_married database in phpAdmin
