@@ -679,3 +679,8 @@ a:visited{
     top: 200vh;
     position: absolute;
 }
+.sideColumn p{
+    position:relative;
+    top:7vh;
+    font-size:2em;
+}
