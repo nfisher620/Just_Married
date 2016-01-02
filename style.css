@@ -13,6 +13,7 @@ body{
 .navbar-nav{
     float:right;
     margin:20px;
+    position: relative;
 }
 /* menu name */
 .color{
@@ -53,7 +54,8 @@ span{
 }
 /* Video background */
 video#bgvid {
-    position: fixed;
+    /*position: fixed;*/
+    position:absolute;
     top: 50%;
     left: 50%;
     max-width: 100%;
@@ -226,7 +228,9 @@ p{
     display: inline-block;
     position: relative;
     color: white;
-    margin: 76px -5px -42px 43px;
+    left: 35%;
+    margin: 96px 0px -42px 0px;
+    /*margin: 76px -5px -42px 43px;*/
     width: 22.5vw;
     height: 58vh;
     transition: .3s ease-in-out;
