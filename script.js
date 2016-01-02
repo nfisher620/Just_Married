@@ -123,14 +123,14 @@ function createImages() {
             text: "Nicole Fisher"
 
         },
-        {
-            src: "images/AndyKing0319.jpg",
-            text: "Chermaine Zimmerman"
-        },
-        {
-            src: "images/AndyKing0326.jpg",
-            text: "Rosanna Spence"
-        }
+        //{
+        //    src: "images/AndyKing0319.jpg",
+        //    text: "Chermaine Zimmerman"
+        //},
+        //{
+        //    src: "images/AndyKing0326.jpg",
+        //    text: "Rosanna Spence"
+        //}
         ];
     for (var i = 0; i < bridalImages.length; i++) {
         var image = $('<img>', {
