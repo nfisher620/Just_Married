@@ -159,7 +159,7 @@ function createImages() {
     //Opens modal for vendor for category selected
     $('.text-cover').click(function () {
         //$('.modal-body').empty();
-        getVendorImages(4); //TODO: NO MAGIC NUMBERS
+        getVendorImages(this.vendor_id); //TODO: NO MAGIC NUMBERS
     });
 
 }//Ajax call to just_married database in phpAdmin
@@ -400,7 +400,6 @@ function createVendorIcons(){
         $(vendorDiv).append(link);
         $('.f2_container').append(vendorDiv);
     }
-    $('vendorDiv')
 }
 
 //function floralModal(){
