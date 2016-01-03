@@ -1,11 +1,11 @@
 //parallax functionality
-$(window).scroll(function(element){
-    parallax();
-});
-function parallax(){
-    var scrolled = $(window).scrollTop();
-    $('.bg').css('top',-(scrolled* .2)+'px');
-}
+//$(window).scroll(function(element){
+//    parallax();
+//});
+//function parallax(){
+//    var scrolled = $(window).scrollTop();
+//    $('.bg').css('top',-(scrolled* .2)+'px');
+//}
 
 //onload functions
 $(document).ready(function(){
@@ -21,52 +21,64 @@ function buildGallery(){
     var gallery= [
         {
             src: "images/vendorIcons/accessories2.jpg",
-            text: "Accessories"
+            text: "Accessories",
+            vendor_id: 1
 
         },
         {
             src: "images/vendorIcons/makeup2.jpg",
-            text: "Hair and Make-Up"
+            text: "Hair and Make-Up",
+            vendor_id: 2
         },
         {
             src: "images/vendorIcons/cake2.jpg",
-            text: "Cake"
+            text: "Cake",
+            vendor_id: 3
         },
         {
             src: "images/vendorIcons/attire2.jpg",
-            text: "Attire"
+            text: "Attire",
+            vendor_id: 4
         },
         {
             src: "images/vendorIcons/floralVase2.jpg",
-            text: "Flowers"
+            text: "Flowers",
+            vendor_id: 5
         },
         {
             src: "images/vendorIcons/photobooth2.jpg",
-            text: "Entertainment"
+            text: "Entertainment",
+            vendor_id: 6
         },
         {
             src: "images/vendorIcons/photographer2.jpg",
-            text: "Photography"
+            text: "Photography",
+            vendor_id: 7
         },
         {
             src: "images/vendorIcons/venue2.jpg",
-            text: "Venue"
+            text: "Venue",
+            vendor_id: 9
         },
         {
             src: "images/vendorIcons/videography2.jpg",
-            text: "Videography"
+            text: "Videography",
+            vendor_id: 10
         },
         {
             src: "images/vendorIcons/food2.jpg",
-            text: "Food and Drink"
+            text: "Food and Drink",
+            vendor_id: 8
         },
         {
             src: "images/vendorIcons/personaltouch2.jpg",
-            text: "Personal Touches"
+            text: "Personal Touches",
+            vendor_id: 11
         },
         {
             src: "images/vendorIcons/transportation2.jpg",
-            text: "Transportation"
+            text: "Transportation",
+            vendor_id: 12
         }
     ];
     var container = $('.vendorContainer');
@@ -84,15 +96,17 @@ function buildGallery(){
         });
 
         var cover = $("<div>", {
-            class: 'text-cover'
+            class: 'text-cover',
+            id:gallery[i].vendor_id
         });
         var text = $("<div>", {
             text: gallery[i].text,
-            class: 'text'
+            class: 'text',
         });
 
         cover.append(text);
         imgContainer.append(img,cover).appendTo(container);
+        console.log(gallery[i].vendor_id);
 
         /*(function(){
             var divId = '#img-' + i;
@@ -159,7 +173,9 @@ function createImages() {
     //Opens modal for vendor for category selected
     $('.text-cover').click(function () {
         //$('.modal-body').empty();
-        getVendorImages(this.vendor_id); //TODO: NO MAGIC NUMBERS
+        var vendorId = this.id;
+        console.log(this.id);
+        getVendorImages(vendorId);
     });
 
 }//Ajax call to just_married database in phpAdmin
