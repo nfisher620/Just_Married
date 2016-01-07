@@ -133,7 +133,7 @@ function buildGallery(){
 function createImages() {
     var bridalImages = [
         {
-            src: "images/AndyKing0312.jpg",
+            src: "images/AndyKing0312.JPG",
             text: "Nicole Fisher"
 
         },
@@ -181,7 +181,7 @@ function createImages() {
 }//Ajax call to just_married database in phpAdmin
 function getVendorImages(vendor_id){
     $.ajax({
-        url:'http://localhost:8888/lfz/Just-Married/get_images.php',
+        url:'get_images.php',
         dataType: 'json',
         method: 'post',
         data: {vendor: vendor_id},
