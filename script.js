@@ -134,7 +134,8 @@ function createImages() {
     var bridalImages = [
         {
             src: "images/AndyKing0312.JPG",
-            text: "Nicole Fisher"
+            text: "Nicole Fisher",
+            href: "bride.html"
 
         },
         //{
@@ -151,8 +152,12 @@ function createImages() {
             class: 'bride',
             src: bridalImages[i].src
         });
+        var link = $('<a>' ,{
+            href:bridalImages[i].href
+        });
         image.attr('index', i);
-        $('.brideContainer').append(image);
+        link.append(image);
+        $('.brideContainer').append(link);
         console.log(image);
         console.log(bridalImages[i].text);
     }
