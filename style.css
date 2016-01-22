@@ -697,6 +697,10 @@ a:visited{
     .f1_container{
         margin-left:-7vw;
     }
+    .brideHeader{
+        font-size:55px;
+        top:-58vh;
+    }
 }
 
 @media only screen and (max-width: 703px) and (min-width:400px) {
@@ -729,6 +733,10 @@ a:visited{
         top:6vh;
         width:53vw;
     }
+    .brideHeader{
+        font-size:50px;
+        top:-41vh;
+    }
 
 }
 @media only screen and (max-width: 400px) and (min-width:0px) {
@@ -740,6 +748,10 @@ a:visited{
     }
     .f1_card{
         left:-3vw;
+    }
+    .brideHeader{
+        font-size:50px;
+        top:-32vh;
     }
 }
 
