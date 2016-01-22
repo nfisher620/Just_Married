@@ -316,14 +316,14 @@ a:visited{
         display: none;
     }
 
-    .intro {
-        width: 35vw;
-        height: 5vh;
-        position: relative;
-        margin: auto 0;
-        left: 500px;
-        top: 250px;
-    }
+    /*.intro {*/
+        /*width: 35vw;*/
+        /*height: 5vh;*/
+        /*position: relative;*/
+        /*margin: auto 0;*/
+        /*left: 500px;*/
+        /*top: 250px;*/
+    /*}*/
 
     #bgvid_overlay {
         position: absolute;
@@ -594,8 +594,6 @@ a:visited{
 .modal.and.carousel {
     position: absolute;
 }
-
-/*Nicole, comment me yo!*/
 #imagemodal .carousel-inner img{
     width: 400px;
     height: auto;
@@ -695,4 +693,116 @@ a:visited{
         left:-11vw;
         width:50%;
     }
+}
+/*/ Mobile /*/
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+
+}
+
+/*----------- iPhone 5 and 5S -----------*/
+
+/*Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+/* ----------- iPhone 6 ----------- */
+@media only screen and (max-width: 376px) {
+    h1{
+        right:12vw;
+        top:-4vh;
+        font-size:81px;
+    }
+    h2{
+        right:0vw;
+        top:9vh;
+        font-size:30px;
+    }
+    h3{
+        top:3vh;
+        margin:0 auto;
+        width:65vw;
+        right:0;
+        font-size:42px;
+    }
+    p{
+        top:9vh;
+        font-size:35px;
+    }
+    .black_header{
+        font-size:35px;
+        right:34vw;
+        top:-34vh;
+    }
+    .sideColumn p{
+        font-size:15px;
+    }
+    .featuredLetters{
+        width:68%;
+        right:-13vw;
+    }
+    .bride{
+        margin:0;
+        left:16%;
+        width:56vw;
+    }
+    .bridesLetters{
+        right:-27vw;
+    }
+    video#bgvid{
+        margin-bottom:24vh;
+    }
+    .brideHeader{
+        right:0vw;
+        top:-34vh;
+        font-size:54px;
+    }
+    .carousel-indicators li{
+        position:relative;
+        top:13vh;
+    }
+}
+
+
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+/* ----------- iPad ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+
 }
