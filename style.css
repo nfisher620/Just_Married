@@ -312,9 +312,6 @@ a:visited{
 }
 
 @media screen and (max-device-width: 800px) {
-    #bgvid {
-        display: none;
-    }
 
     /*.intro {*/
         /*width: 35vw;*/
@@ -734,7 +731,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 @media only screen and (max-width: 376px) {
     h1{
         right:12vw;
-        top:-4vh;
+        top:8vh;
         font-size:81px;
     }
     h2{
@@ -785,6 +782,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
         position:relative;
         top:13vh;
     }
+    .f1_container{
+        width:200px;
+    }
+    .f1_card{
+        top:29vh;
+        left:0;
+    }
 }
 
 
@@ -796,6 +800,70 @@ and (-webkit-min-device-pixel-ratio: 2) {
 and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3) {
+    h1{
+        right:12vw;
+        top:14vh;
+        font-size:81px;
+    }
+    h2{
+        right:0vw;
+        top:22vh;
+        font-size:30px;
+    }
+    h3{
+        top:3vh;
+        margin:0 auto;
+        width:45vw;
+        right:0;
+        font-size:42px;
+    }
+    p{
+        top:9vh;
+        font-size:35px;
+    }
+    .black_header{
+        font-size:35px;
+        right:34vw;
+        top:-47vh;
+    }
+    .sideColumn{
+        top:197vh;
+    }
+    .sideColumn p{
+        top:2vh;
+        font-size:18px;
+    }
+    .featuredLetters{
+        width:68%;
+        right:-13vw;
+    }
+    .bride{
+        margin:0;
+        left:16%;
+        width:56vw;
+    }
+    .bridesLetters{
+        right:-27vw;
+    }
+    video#bgvid{
+        margin-bottom:24vh;
+    }
+    .brideHeader{
+        right:0vw;
+        top:-34vh;
+        font-size:54px;
+    }
+    .carousel-indicators li{
+        position:relative;
+        top:13vh;
+    }
+    .f1_container{
+        width:200px;
+    }
+    .f1_card{
+        top:29vh;
+        left:0;
+    }
 
 }
 
