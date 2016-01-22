@@ -684,13 +684,72 @@ a:visited{
     font-size:2em;
 }
 
-@media only screen and (max-width: 910px) and (min-width:0px) {
-    .f1_card{
-        top:21vh;
-        left:-11vw;
-        width:50%;
+@media only screen and (max-width: 980px) and (min-width:704px) {
+    .sideColumn p{
+        font-size:164%;
+    }
+    .black_header{
+        font-size:412%;
+    }
+    .vendorTitle{
+        font-size:3vw;
+    }
+    .f1_container{
+        margin-left:-7vw;
     }
 }
+
+@media only screen and (max-width: 703px) and (min-width:400px) {
+    .sideColumn p{
+        font-size:123%;
+    }
+    .black_header{
+        font-size:271%;
+        right:34vw;
+        top:-43vh;
+    }
+    h3{
+        width:52vw;
+        margin: 0 auto;
+        top:12vh;
+        font-size: 290%;
+        right:0;
+    }
+    p{
+        font-size:200%;
+    }
+    .featuredLetters{
+        width:64%;
+    }
+    .vendorTitle{
+        font-size:3vw;
+    }
+    .f1_container{
+        margin-left:-2vw;
+        top:6vh;
+        width:53vw;
+    }
+
+}
+@media only screen and (max-width: 400px) and (min-width:0px) {
+    .text{
+        font-size:120%;
+    }
+    .vendorTitle{
+        font-size:5vw;
+    }
+    .f1_card{
+        left:-3vw;
+    }
+}
+
+/*@media only screen and (max-width: 910px) and (min-width:0px) {*/
+    /*.f1_card{*/
+        /*top:21vh;*/
+        /*left:-11vw;*/
+        /*width:50%;*/
+    /*}*/
+/*}*/
 /*/ Mobile /*/
 
 /* ----------- iPhone 4 and 4S ----------- */
