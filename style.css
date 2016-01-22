@@ -743,13 +743,6 @@ a:visited{
     }
 }
 
-/*@media only screen and (max-width: 910px) and (min-width:0px) {*/
-    /*.f1_card{*/
-        /*top:21vh;*/
-        /*left:-11vw;*/
-        /*width:50%;*/
-    /*}*/
-/*}*/
 /*/ Mobile /*/
 
 /* ----------- iPhone 4 and 4S ----------- */
@@ -759,8 +752,19 @@ a:visited{
 and (min-device-width: 320px)
 and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2) {
-
-
+    .black_header{
+        font-size:29px;
+        right:34vw;
+        top:-4vh;
+        position:relative;
+    }
+    .sideColumn p{
+        font-size:10px;
+        top:45vh;
+    }
+    .f2_container{
+        top:-33vh;
+    }
 }
 
 /*----------- iPhone 5 and 5S -----------*/
@@ -770,7 +774,67 @@ and (-webkit-min-device-pixel-ratio: 2) {
 and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
-
+    h1{
+        right:12vw;
+        top:8vh;
+        font-size:62px;
+    }
+    h2{
+        right:0vw;
+        top:9vh;
+        font-size:23px;
+    }
+    h3{
+        top:3vh;
+        margin:0 auto;
+        width:65vw;
+        right:0;
+        font-size:31px;
+    }
+    p{
+        top:16vh;
+        font-size:29px;
+    }
+    .black_header{
+        font-size:29px;
+        right:34vw;
+        top:-24vh;
+    }
+    .sideColumn p{
+        font-size:12px;
+        top:28vh;
+    }
+    .featuredLetters{
+        width:74%;
+        right:-13vw;
+    }
+    .bride{
+        margin:0;
+        left:16%;
+        width:56vw;
+    }
+    .bridesLetters{
+        right:-27vw;
+    }
+    video#bgvid{
+        margin-bottom:24vh;
+    }
+    .brideHeader{
+        right:0vw;
+        top:-34vh;
+        font-size:54px;
+    }
+    .carousel-indicators li{
+        position:relative;
+        top:13vh;
+    }
+    .f1_container{
+        width:200px;
+    }
+    .f1_card{
+        top:21vh;
+        left:-13vw;
+    }
 }
 
 
@@ -782,12 +846,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-
-/* ----------- iPhone 6 ----------- */
-@media only screen and (max-width: 376px) {
     h1{
         right:12vw;
         top:8vh;
@@ -845,8 +903,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width:200px;
     }
     .f1_card{
-        top:29vh;
-        left:0;
+        top:18vh;
+        left:-10vw;
     }
 }
 
@@ -920,7 +978,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         width:200px;
     }
     .f1_card{
-        top:29vh;
+        top:5vh;
         left:0;
     }
 
@@ -930,6 +988,22 @@ and (-webkit-min-device-pixel-ratio: 3) {
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-
-
+    .sideColumn{
+        top:176vh;
+        height:117vh;
+    }
+    .sideColumn p{
+        font-size:211%;
+        top:11vh;
+    }
+    .bride{
+        left:22%;
+        width:48.5vw;
+    }
+    .black_header{
+        top:-72vh;
+    }
+    .brideHeader{
+        top:-39vh;
+    }
 }
